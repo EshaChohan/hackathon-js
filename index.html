@@ -12,13 +12,17 @@
 <body>
   <!-- NAVBAR  START -->
   <div class="navbar">
+    <h2 id="logo" href="#" style="color: rgba(0, 0, 0, 0.856); font-size: 19px; font-weight: bold;
+    font-family: sofia-sans;">CDS<span
+         style="color: rgb(255, 62, 178);">22</span>-<span
+         style="font-family: sofia-sans-italic;">formula</span></h2>
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Health</a></li>
         <li><a href="#">Locations</a></li>
         <li><a href="#">Shop</a></li>
-        <li>
+        <li   id="formula">
           <a href="#" style="color: rgba(0, 0, 0, 0.856); font-size: 55px; font-weight: bold;
          font-family: sofia-sans; position: relative; top: 10px;">CDS<span
               style="color: rgb(255, 62, 178);">22</span>-<span
@@ -29,7 +33,8 @@
         <li><a href="#">Recipe</a></li>
       </ul>
       <button class="cart-btn" onclick="show()"><img src="Assets/add-button.png" alt="add to cart icon" height="23px"
-          width="23px"></button>
+        width="23px"></button>
+        <button id="toggle-btn"><img src="Assets/toggle-btn.png" alt="toggle-btn" height="25px" width="25px"></button>
     </nav>
   </div>
   <!-- NAVBAR END -->
@@ -54,7 +59,7 @@
     </div>
   </div>
   <!-- FIRST SECTION END  -->
-  <img src="Assets/background1.PNG" alt="background" style="width: 100%;">
+  <img src="Assets/background1.PNG" alt="background" style="width: 100%;" class="background">
 
   <!-- SECOND SECTION START -->
   <div class="second-section">
@@ -102,7 +107,7 @@
     </div>
   </div>
   <!-- SECOND SECTION END -->
-  <img src="Assets/background2.PNG" alt="background" style="width: 100%;">
+  <img src="Assets/background2.PNG" alt="background" style="width: 100%;"  class="background">
   <!-- THIRD SECTION START -->
   <div class="third-section">
     <div class="third-section-info">
@@ -139,7 +144,7 @@
 
   </div>
   <!-- THIRD SECTION END -->
-  <img src="Assets/background3.PNG" alt="background" style="width: 100%;">
+  <img src="Assets/background3.PNG" alt="background" style="width: 100%;"  class="background">
   <!-- FOURTH SECTION START -->
   <div class="fourth-section">
     <div class="fourth-section-heading">
@@ -197,7 +202,7 @@
     </div>
   </div>
   <!-- FOURTH SECTION END -->
-  <img src="Assets/background4.PNG" alt="background" style="width: 100%;">
+  <img src="Assets/background4.PNG" alt="background" style="width: 100%;"  class="background">
   <!-- FIFTH SECTION START -->
   <div class="fifth-section">
     <h1>De <span style="color: rgb(255, 62, 178);">Simone</span> <span style="color: rgba(0,171,209,1);">
@@ -275,7 +280,7 @@
     </p>
   </div>
   <!--  SIXTH SECTION END -->
-  <img src="Assets/background5.PNG" alt="background" style="width: 100%;">
+  <img src="Assets/background5.PNG" alt="background" style="width: 100%;"  class="background">
   <!-- SEVENTH SECTION START -->
   <div class="seventh-section">
     <h1>Product packaging</h1>
@@ -285,9 +290,9 @@
     </p>
     <div class="seventh-section-cards">
       <div>
-        <img src="Assets/previous icon.png" alt="previous icon" height="50px" width="50px">
+        <img src="Assets/previous icon.png" class="icon" alt="previous icon" height="50px" width="50px" onclick="previous()">
       </div>
-      <div class="cards-section">
+      <div class="cards-section" id="slider1">
         <div class="card">
           <div> <img src="Assets/product1.PNG" alt="card image"></div>
           <h1>CDS22-formula</h1>
@@ -322,8 +327,46 @@
           <button onclick="addToCart('112 capsules', 800)">SHOP NOW</button>
         </div>
       </div>
+      <!--  -->
+      <div class="cards-section" id="slider2">
+        <div class="card">
+          <div> <img src="Assets/product4.PNG" alt="card image"></div>
+          <h1>CDS22-formula</h1>
+          <h2 style="color: rgb(255, 62, 178);">450 billion sachets</h2>
+          <br />
+          <h3>Strong and convenient</h3>
+          <p>Potency:<span style="font-size: 14px; font-weight: bold;"> 450 billion live bacteria per sachet</span>
+            <br />
+            Format:<span style="font-size: 14px; font-weight: bold;"> Box of 12 sachets</span>
+          </p>
+          <button onclick="addToCart('450 sachet', 1000)">SHOP NOW</button>
+        </div>
+        <div class="card">
+          <div> <img src="Assets/product5.PNG" alt="card image"></div>
+          <h1>CDS22-formula</h1>
+          <h2 style="color: rgba(232,38,111,1);">900 billion sachets</h2>
+          <br />
+          <h3>Superior power</h3>
+          <p>Potency:<span> 900 billion live bacteria per sachet</span></p>
+          <button onclick="addToCart('900 sachet', 1500)">SHOP NOW</button>
+        </div>
+
+        <div class="card">
+          <div> <img src="Assets/product6.PNG" alt="card image"></div>
+          <h1>CDS22-formula</h1>
+          <h2 style="color: rgba(0,171,209,1);">112 billion capsules</h2>
+          <br />
+          <h3>Efficient and flexible</h3>
+          <p>Potency:<span style="font-size: 14px; font-weight: bold;">112 billion live bacteria per capsule</span>
+            <br />
+            Format:<span style="font-size: 14px; font-weight: bold;"> Box of 20 individually packaged capsules</span>
+          </p>
+          <button onclick="addToCart('112 capsules', 800)">SHOP NOW</button>
+        </div>
+      </div>
+      <!--  -->
       <div>
-        <img src="Assets/next icon.png" alt="next icon" height="50px" width="50px">
+        <img src="Assets/next icon.png"  class="icon" alt="next icon" height="50px" width="50px" onclick="next()">
       </div>
     </div>
   </div>
@@ -384,7 +427,7 @@
           <input type="submit" class="submit-btn" value="Send Message">
         </form>
       </div>
-      <div>
+      <div class="contact-section-img">
         <h2
           style="color: rgba(0, 0, 0, 0.856); font-size: 55px; font-weight: bold; font-family: sofia-sans;margin: 55px 0px -30px -60px;">
           CDS<span style="color: rgb(255, 62, 178);">22</span>-<span

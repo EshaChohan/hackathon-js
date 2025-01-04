@@ -7,7 +7,9 @@
     font-family: sofia-sans-italic;
     src: url(Assets/SofiaSansExtraCondensed-Italic-VariableFont_wght.ttf)
 }
-
+#logo {
+    display: none;
+}
 .navbar {
     padding: 5px 50px;
     margin-bottom: 30px;
@@ -40,7 +42,7 @@
     color: grey;
 }
 
-.navbar img {
+.cart-btn{
     float: inline-end;
     padding-top: 30px;
 }
@@ -78,7 +80,14 @@
     text-align: center;
     padding: 10px 2px;
 }
-
+#toggle-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    margin-left: 230px;  
+}
 .first-section {
     margin-top: 20px;
     background-color: rgb(237, 237, 237);

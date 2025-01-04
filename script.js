@@ -26,3 +26,24 @@ function updateCartDisplay() {
         cartList.appendChild(listItem);
     }
 }
+const slide1 = document.getElementById("slider1");
+const slide2 = document.getElementById("slider2");
+slide2.style.display = "none"
+    
+
+function next(){
+     slide2.style.display = "flex"
+    slide1.style.display = "none"
+   
+}
+function previous(){
+ slide1.style.display = "flex"
+    slide2.style.display = "none"
+}
+
+ // Toggle button functionality
+ const toggleButton = document.getElementById('toggle-btn');
+ const navMenu = document.getElementById('nav-menu');
+ toggleButton.addEventListener('click', () => {
+     navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+ });
