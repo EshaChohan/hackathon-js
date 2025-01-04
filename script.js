@@ -1,6 +1,7 @@
-function show(){
-    var product = document.getElementById('cart')
-    product.style.display ="block";
+function show() {
+    var product = document.getElementById('cart');
+    product.style.display = "block";
+    product.className = "cart";
 }
 const cart = {};
 function addToCart(productName, productPrice) {
@@ -20,7 +21,8 @@ function updateCartDisplay() {
     cartList.innerHTML = '';
     for (let product in cart) {
         const listItem = document.createElement('li');
-        listItem.innerText = `${product} - Quantity: ${cart[product].quantity} - Total Price: Rs${cart[product].totalPrice}`;
+        listItem.className = "cart-item"
+        listItem.innerText = `${product} ,  Quantity: ${cart[product].quantity} ,  Total Price: Rs${cart[product].totalPrice}`;
         cartList.appendChild(listItem);
     }
 }
