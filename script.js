@@ -1,7 +1,12 @@
 function show() {
     var product = document.getElementById('cart');
-    product.style.display = "block";
     product.className = "cart";
+    if(product.style.display === "block"){
+        product.style.display="none"
+    }
+    else {
+        product.style.display = "block";
+    }
 }
 const cart = {};
 function addToCart(productName, productPrice) {
