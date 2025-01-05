@@ -1,4 +1,4 @@
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) and (min-width:340px) {
     body {
         margin: 0px;
         padding: 0px;
@@ -27,8 +27,9 @@
     #toggle-btn {
         display: block;
         position: relative;
-      left: 110px;
+     left: 25%;
       padding: 0px;
+    
     }
     .navbar ul {
         border: 2px solid rgb(199, 191, 191);
@@ -53,7 +54,7 @@
     .cart-btn {
        position: absolute;
       right: 0;
-      margin-right: 35px !important;
+      margin-right: 14% !important;
        margin-top: -25px;
     }
     .cart-btn img {
@@ -108,15 +109,15 @@
     }
     
     .first-section-img {
-       width: 70% !important;
+       width: 50% !important;
+      margin-left: 130px;
     }
     .first-section-img img {
         height: 270px;
         width: 170px;
-        padding-left: 70px;
     }
-    .first-section-img img+img {
-        left: 70px !important;
+    .first-section-img>img {
+        left: 50px !important;
     }
     .second-section {
         flex-direction: column;
